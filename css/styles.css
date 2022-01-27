@@ -13,6 +13,7 @@
   --decoration-grey-color: #afb1b8;
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --background-example-hover-overley: rgba(33, 150, 243, 0.9);
+  --background-occupation-overley: rgba(47, 48, 58, 0.8);
 
   --transfotmation-time: 250ms;
   --tranformation-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -132,6 +133,9 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .site-nav .link:hover,
@@ -171,6 +175,9 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .link-icon {
@@ -229,6 +236,9 @@ ul {
   border-radius: 4px;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .hero .button:hover,
@@ -297,8 +307,32 @@ ul {
 .occupation-list .item:not(:last-child) {
   margin-right: 30px;
 }
+
+.occupation-link {
+  display: block;
+  position: relative;
+}
+
 .occupation-image {
   display: block;
+}
+
+.occupation-description {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+
+  padding: 27px;
+  background-color: var(--background-occupation-overley);
 }
 
 /* our-command */
@@ -364,6 +398,9 @@ ul {
   border-radius: 50%;
   text-align: center;
   color: var(--decoration-grey-color);
+  transition-property: color, background-color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .item-social-link:hover,
@@ -391,6 +428,9 @@ ul {
   display: flex;
   border: 1px solid var(--decoration-grey-color);
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .clients-list-item:not(:last-child) {
@@ -404,6 +444,9 @@ ul {
   align-items: center;
   text-align: center;
   color: var(--decoration-grey-color);
+  transition-property: color;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .clients-list-link:hover,
@@ -439,6 +482,9 @@ ul {
   line-height: 1.62;
   letter-spacing: 0.03em;
   background-color: var(--background-secondary);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .filters .item:not(:first-child) {
@@ -459,6 +505,9 @@ ul {
 
 .example {
   background-color: var(--white-text-color);
+  transition-property: box-shadow;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
 }
 
 .example:not(:nth-child(3n)) {
@@ -491,7 +540,7 @@ ul {
   color: var(--white-text-color);
   background-color: var(--background-example-hover-overley);
 
-  transition-property: box-shadow, top;
+  transition-property: top;
   transition-duration: var(--transfotmation-time);
   transition-timing-function: var(--tranformation-function);
 }
