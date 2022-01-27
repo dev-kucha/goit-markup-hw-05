@@ -120,6 +120,7 @@ ul {
 
 .site-nav .link {
   display: block;
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-text-color);
@@ -133,6 +134,18 @@ ul {
 .site-nav .link:focus,
 .site-nav .link.active {
   color: var(--accent-color);
+}
+
+.site-nav .link.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .contacts {
