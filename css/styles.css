@@ -542,7 +542,7 @@ ul {
   color: var(--white-text-color);
   background-color: var(--background-example-hover-overley);
 
-  transition-property: top;
+  transition-property: transform;
   transition-duration: var(--transfotmation-time);
   transition-timing-function: var(--tranformation-function);
 }
@@ -555,7 +555,7 @@ ul {
 
 .example-link:hover .example-hover-overlay,
 .example-link:focus .example-hover-overlay {
-  top: 0;
+  transform: translateY(-100%);
 }
 
 .example-description {
