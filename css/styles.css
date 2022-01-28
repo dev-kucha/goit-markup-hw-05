@@ -648,12 +648,12 @@ ul {
 
 .backdrop {
   position: fixed;
-  visibility: visible;
+  /* visibility: visible; */
+  opacity: 1;
   width: 100vw;
   height: 100vh;
   left: 0px;
   top: 0px;
-  /* outline: 1px maroon dotted; */
   background-color: rgba(0, 0, 0, 0.2);
   transition-property: opacity;
   transition-duration: var(--transfotmation-time);
@@ -662,17 +662,24 @@ ul {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   pointer-events: none;
 }
 
-.modal {
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.backdrop .modal {
   position: absolute;
   width: 528px;
   height: 581px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: var(--transfotmation-time);
+  transition-timing-function: var(--tranformation-function);
   background: var(--white-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
